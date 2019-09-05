@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AlgoBis</title>
+</head>
+<body>
+<h1>Transacton time & Rev Per Day</h1>
+<p>The below code document.write s the Revenue per Day for a Business. AB CT. The function, revPerDay(), takes two arguments. The first is a function. The second is a number</p>
+<pre>    // Function Expression.
+    // Returns a # between 0 and 10 divided by bisExp. 10 knows, therefor faster tTime (transaction time).
+    let transactTime = function(bisExp){
+        let tTime = 10*Math.random()/bisExp;
+        return tTime;
+    }
+
+    // Function Declariation
+    // Note how the first argument (aka parameter), transactionTime, is a function that returns a number.
+    // Note the default of 50 for the second argument, avgSpent.
+    function revPerDay(transactTime, avgSpent=50){
+        let rpd = avgSpent/transactTime*60*8;
+        return rpd.toFixed(2)
+    }
+
+    // Note the transactionTime takes one argument. Here it is 10. Ultimatly this number would come
+    // from a client object.
+    document.write(revPerDay(transactTime(10),75));</pre>
+
+<script>
+    // Function Expression.
+    // Returns a # between 0 and 10 divided by bisExp. 10 knows, therefor faster tTime (transaction time).
+    let transactTime = function(bisExp){
+        let tTime = 10*Math.random()/bisExp;
+        return tTime;
+    }
+
+    // Function Declariation
+    // Note how the first argument (aka parameter), transactionTime, is a function that returns a number.
+    // Note the default of 50 for the second argument, avgSpent.
+    function revPerDay(transactTime, avgSpent=50){
+        let rpd = avgSpent/transactTime*60*8;
+        return rpd.toFixed(2)
+    }
+
+    // Note the transactionTime takes one argument. Here it is 10. Ultimatly this number would come
+    // from a client object.
+    document.write(revPerDay(transactTime(10),75));
+</script>
+</body>
+</html>
